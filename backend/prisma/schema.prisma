@@ -19,6 +19,7 @@ model Tenant {
   customers   Customer[]
   products    Product[]
   orders      Order[]
+  events      Event[]   
 }
 
 model Customer {
@@ -80,3 +81,4 @@ model Event {
 
   tenant    Tenant   @relation(fields: [tenantId], references: [id])
 }
+
