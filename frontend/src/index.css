@@ -1,13 +1,56 @@
-body {
+/* GLOBAL RESET */
+*,
+*::before,
+*::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* REMOVE unwanted Vite defaults */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+
+  /* REMOVE color-scheme */
+  /* REMOVE background here */
+
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* BODY FIXES */
+body {
+  width: 100vw;
+  height: 100vh;
+
+  /* REMOVE flex centering */
+  display: block;
+
+  background: #111318 !important;
+  overflow: hidden;       /* prevents white strip */
+  overflow-x: hidden;
+  overflow-y: hidden;     /* IMPORTANT */
+
+  color: rgba(255, 255, 255, 0.87);
+}
+
+/* Optional link/button default styles remain same */
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* LIGHT MODE (unused but kept clean) */
+@media (prefers-color-scheme: light) {
+  body {
+    background: #111318 !important;
+  }
 }
